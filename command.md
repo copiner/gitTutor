@@ -140,3 +140,79 @@ files without staging first
 
 `git checkout HEAD -- files` copies files from the latest commit to both the stage and the working directory.
 
+
+
+```
+[root@wra gitTutor]# git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   command.md
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[root@wra gitTutor]#
+[root@wra gitTutor]# git add command.md
+[root@wra gitTutor]#
+[root@wra gitTutor]# git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   command.md
+#
+[root@wra gitTutor]# 
+
+````
+
+
+```
+
+[root@wra gitTutor]# git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   command.md
+#
+[root@wra gitTutor]# git reset -- command.md
+Unstaged changes after reset:
+M       command.md
+[root@wra gitTutor]#
+[root@wra gitTutor]#
+[root@wra gitTutor]# git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   command.md
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[root@wra gitTutor]# 
+
+```
+
+
+```
+
+[root@wra gitTutor]# git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   command.md
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+[root@wra gitTutor]# git  add command.md
+[root@wra gitTutor]# git commit -m "try"
+[master 6dabe41] try
+1 file changed, 132 insertions(+), 1 deletion(-)
+[root@wra gitTutor]# git status
+# On branch master
+nothing to commit, working directory clean
+[root@wra gitTutor]#
+ 
+```
