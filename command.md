@@ -110,11 +110,15 @@ git reset --hard origin/master
 ```
 # basic usage
 
-git add files    |  git checkout -- files
+#1
+git add files    
+#2
+git commit 
 
-git commit    | git reset -- files
-
-
+#-2
+git reset -- files
+#-1
+git checkout -- files
 
 ```
 `git add files` copies files (at their current state) to the stage.
